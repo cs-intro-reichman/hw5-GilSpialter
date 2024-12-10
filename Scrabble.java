@@ -115,7 +115,7 @@ public class Scrabble {
 					}
 				}
 				else { 											//input is not in dictionary
-					System.out.println("No such word in the dictionary. Try again.");
+					System.out.println("Invalid word. Try again.");
 				}
 			}
 		}
@@ -143,7 +143,6 @@ public class Scrabble {
 				 if (input.equals("n")) {	playHand(MyString.randomStringOfLetters(10));	}
 			else if (input.equals("e")) {  break;											}
 		}
-		System.out.println();
 	}
 
 	public static void main(String[] args) {
