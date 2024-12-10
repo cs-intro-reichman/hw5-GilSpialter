@@ -143,6 +143,7 @@ public class Scrabble {
 				 if (input.equals("n")) {	playHand(MyString.randomStringOfLetters(10));	}
 			else if (input.equals("e")) {  break;											}
 		}
+		System.out.println();
 	}
 
 	public static void main(String[] args) {
