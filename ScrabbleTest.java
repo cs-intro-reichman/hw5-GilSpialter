@@ -110,6 +110,7 @@ public class ScrabbleTest {
 
     private static void testPlayHandWithMockInput() {
         System.out.println("\nTesting playHand with mock input (hand: aretiin):");
+        System.out.println("-------Test1-------");
         Scrabble.init();
         // Test with multiple valid words that can be made from "aretiin"
         String mockInputStr = "train\ninvalid1\ninvalid2\n.\n";
@@ -117,11 +118,14 @@ public class ScrabbleTest {
         InputStream originalIn = System.in;
         PrintStream originalOut = System.out;
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.out.println("-------Test2-------");
         System.setIn(mockInput);
         System.setOut(new PrintStream(outContent));
+        System.out.println("-------Test3-------");
         
         try {
             Scrabble.playHand("aretiin");
+            System.out.println("-------Test4-------");
             
             // Verify output
             String output = outContent.toString();
@@ -129,18 +133,25 @@ public class ScrabbleTest {
             
             System.out.println("Expected sequence of plays:");
             System.out.println("1. 'train' -> score: 25");
+            System.out.println("-------Test5-------");
 
             System.out.println("\nActual output:");
             System.out.println(output);
             
             // Optional: Add specific assertions
             boolean hasExpectedOutput = output.contains("train");
-            System.out.println("\nTest passed: " + hasExpectedOutput);
+            System.out.println("-------Test6-------");
+            System.out.println("\nTest passed: " + hasExpectedOutput);      
+            System.out.println("-------Test7-------");
+
 
             
         } finally {
             System.setIn(originalIn);
+            System.out.println("-------Test8-------");
             System.setOut(originalOut);
+            System.out.println("-------Test9-------");
+
         }
     }
 
