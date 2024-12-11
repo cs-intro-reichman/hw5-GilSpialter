@@ -94,6 +94,7 @@ public class Scrabble {
 		// the stream of characters coming from the keyboard. Used for reading the user's inputs.   
 		In in = new In();
 		while (hand.length() > 0) {
+			System.out.println();
 			System.out.println("Current Hand: " + MyString.spacedString(hand));
 			System.out.println("Enter a word, or '.' to finish playing this hand:");
 
@@ -109,6 +110,7 @@ public class Scrabble {
 						hand = MyString.remove(hand, input);
 						score += wordScore(input);
 						System.out.println(input + " earned "+wordScore(input)+" points. Score: " + score + " points");
+						System.out.println();														///////////////////////////////////////////////////////////////////////s
 					}
 					else {										//input is not a subset
 						System.out.println("Invalid word. Try again.");
