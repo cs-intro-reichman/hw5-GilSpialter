@@ -122,7 +122,6 @@ public class ScrabbleTest {
         
         try {
             Scrabble.playHand("aretiin");
-            System.out.println("");
             
             // Verify output
             String output = outContent.toString();
@@ -136,6 +135,7 @@ public class ScrabbleTest {
             
             // Optional: Add specific assertions
             boolean hasExpectedOutput = output.contains("train");
+            System.out.println("-------Test6-------");
             System.out.println("\nTest passed: " + hasExpectedOutput);      
 
         } finally {
