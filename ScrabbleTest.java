@@ -88,7 +88,6 @@ public class ScrabbleTest {
         ByteArrayInputStream mockInput = new ByteArrayInputStream(mockInputStr.getBytes());
         InputStream originalIn = System.in;
         System.setIn(mockInput);
-        
         try {
             Scrabble.playHand("test");
             System.out.println("playHand() method exists and accepts String parameter");
@@ -121,24 +120,25 @@ public class ScrabbleTest {
         System.setOut(new PrintStream(outContent));
         
         try {
-            Scrabble.playHand("aretiin");
-            
+            Scrabble.playHand("aretiin");            
             // Verify output
             String output = outContent.toString();
             System.setOut(originalOut); // Reset before printing results
             
             System.out.println("Expected sequence of plays:");
             System.out.println("1. 'train' -> score: 25");
+
             System.out.println("\nActual output:");
             System.out.println(output);
             
             // Optional: Add specific assertions
             boolean hasExpectedOutput = output.contains("train");
             System.out.println("\nTest passed: " + hasExpectedOutput);
-            
+
         } finally {
             System.setIn(originalIn);
             System.setOut(originalOut);
+
         }
     }
 
