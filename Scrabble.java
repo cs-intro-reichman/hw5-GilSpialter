@@ -95,7 +95,7 @@ public class Scrabble {
 		In in = new In();
 		while (hand.length() > 0) {
 			System.out.println("Current Hand: " + MyString.spacedString(hand));
-			System.out.println("Enter a word, or '.' to finish playing this hand:");
+			System.out.print("Enter a word, or '.' to finish playing this hand:");
 
 			String input = in.readString();
 			// Reads the next "token" from the keyboard. A token is defined as a string of 
