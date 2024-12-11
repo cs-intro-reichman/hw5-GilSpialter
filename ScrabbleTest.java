@@ -121,8 +121,7 @@ public class ScrabbleTest {
         System.setOut(new PrintStream(outContent));
         
         try {
-            Scrabble.playHand("aretiin");
-            
+            Scrabble.playHand("aretiin");            
             // Verify output
             String output = outContent.toString();
             System.setOut(originalOut); // Reset before printing results
@@ -131,10 +130,12 @@ public class ScrabbleTest {
             System.out.println("1. 'train' -> score: 25");
 
             System.out.println("\nActual output:");
+            System.out.println(output);
             
             // Optional: Add specific assertions
             boolean hasExpectedOutput = output.contains("train");
             System.out.println("Test passed: " + hasExpectedOutput);      
+
         } finally {
             System.setIn(originalIn);
             System.setOut(originalOut);
