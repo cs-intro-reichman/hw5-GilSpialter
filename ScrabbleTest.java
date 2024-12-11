@@ -131,11 +131,10 @@ public class ScrabbleTest {
             System.out.println("1. 'train' -> score: 25");
 
             System.out.println("\nActual output:");
-            System.out.println(output);
             
             // Optional: Add specific assertions
             boolean hasExpectedOutput = output.contains("train");
-            System.out.println("-------Test6-------");
+            System.out.println("");                         //Test 6--------------------------
             System.out.println("\nTest passed: " + hasExpectedOutput);      
 
         } finally {
