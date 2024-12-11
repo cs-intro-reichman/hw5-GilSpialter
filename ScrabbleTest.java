@@ -135,7 +135,6 @@ public class ScrabbleTest {
             // Optional: Add specific assertions
             boolean hasExpectedOutput = output.contains("train");
             System.out.println("\nTest passed: " + hasExpectedOutput);      
-
         } finally {
             System.setIn(originalIn);
             System.setOut(originalOut);
