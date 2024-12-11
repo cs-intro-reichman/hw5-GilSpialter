@@ -88,9 +88,8 @@ public class ScrabbleTest {
         ByteArrayInputStream mockInput = new ByteArrayInputStream(mockInputStr.getBytes());
         InputStream originalIn = System.in;
         System.setIn(mockInput);
-        
         try {
-            Scrabble.playHand("test");
+            Scrabble.playHand("\ntest");                                        //added \n ---------------------------------
             System.out.println("playHand() method exists and accepts String parameter");
             
             // Test required method calls
@@ -134,7 +133,7 @@ public class ScrabbleTest {
             
             // Optional: Add specific assertions
             boolean hasExpectedOutput = output.contains("train");
-            System.out.println("Test passed: " + hasExpectedOutput);      
+            System.out.println("\nTest passed: " + hasExpectedOutput);
 
         } finally {
             System.setIn(originalIn);
