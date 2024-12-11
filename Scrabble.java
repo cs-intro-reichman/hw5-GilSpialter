@@ -110,7 +110,8 @@ public class Scrabble {
 						hand = MyString.remove(hand, input);
 						score += wordScore(input);
 						System.out.println(input + " earned "+wordScore(input)+" points. Score: " + score + " points");
-						System.out.println();														///////////////////////////////////////////////////////////////////////s
+						System.out.println(""); ////////////////////////////////////////////////////////////////////--------------------------
+
 					}
 					else {										//input is not a subset
 						System.out.println("Invalid word. Try again.");
@@ -123,6 +124,7 @@ public class Scrabble {
 		}
 		if (hand.length() == 0) {
 	        System.out.println("Ran out of letters. Total score: " + score + " points");
+
 		} else {
 			System.out.println("End of hand. Total score: " + score + " points");
 		}
