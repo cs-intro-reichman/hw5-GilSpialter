@@ -89,7 +89,7 @@ public class ScrabbleTest {
         InputStream originalIn = System.in;
         System.setIn(mockInput);
         try {
-            Scrabble.playHand("\ntest");                                        //added \n ---------------------------------
+            Scrabble.playHand("test");
             System.out.println("playHand() method exists and accepts String parameter");
             
             // Test required method calls
