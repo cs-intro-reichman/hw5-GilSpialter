@@ -108,7 +108,7 @@ public class Scrabble {
 					if (MyString.subsetOf(input, hand)) {		//input is subset and in dictionary
 						hand = MyString.remove(hand, input);
 						score += wordScore(input);
-						System.out.println(input + " earned "+wordScore(input)+" points. Score: " + score + " points");
+						System.out.println(input + " earned "+wordScore(input)+" points. Score: " + score + " points\n");
 					}
 					else {										//input is not a subset
 						System.out.println("Invalid word. Try again.");
